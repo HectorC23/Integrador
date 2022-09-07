@@ -51,7 +51,9 @@
     #FCA311
     #E5E5E5
 */
-
+html{
+    scroll-behavior: smooth;
+}
 body {
     height: 300vh;
     width: 100%;
