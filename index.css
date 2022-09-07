@@ -1,0 +1,317 @@
+* {
+    margin: 0%;
+    
+}
+
+@font-face {
+    font-family: 'Beth Ellen';
+    src: url(./fonts/Beth_Ellen/BethEllen-Regular.ttf);
+}
+@font-face {
+    font-family: 'Comforter';
+    src: url(./fonts/Comforter/Comforter-Regular.ttf);
+}
+@font-face {
+    font-family: 'Rock Salt';
+    src: url(./fonts/Rock_Salt/RockSalt-Regular.ttf);
+}
+@font-face {
+    font-family: 'Splash';
+    src: url(./fonts/Splash/Splash-Regular.ttf);
+}
+
+@keyframes tipografia-bucle {
+    25%{
+        font-family: 'Rock Salt', cursive;
+    }
+    50% {
+        font-family: 'Splash', cursive;
+    }
+    75% {
+        font-family: 'Beth Ellen', cursive;
+    }
+}
+
+@keyframes desplazar {
+    25%{
+        transform: translateY(-80px);
+    }
+    50% {
+        transform: translateY(-100px);
+    }
+    75% {
+        transform: translateY(-100px);
+    }
+}
+
+/* COLORES
+    #CF3B67
+    #E5E5E5
+    #14213D
+    #FCA311
+    #E5E5E5
+*/
+
+body {
+    height: 300vh;
+    width: 100%;
+    background-color: #22333b;
+    min-width: 319px;
+    /* #D9D9D9 // #E5E5E5 */
+}
+
+header {
+    height: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #0a0908;
+    min-width: 319px;
+    /* combinacion de colores 
+    
+    #EDAE49 // #FCA311  + #00798C // #30638E // #003D5B // #14213D
+    
+    #3C6E71 // #284B63
+
+    */
+}
+
+.cont-logo {
+    width: 20%;
+    min-width: 80px;
+    max-width: 100px;
+    height: 80%;
+    max-height: 80px;
+    background-color: #D9D9D9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    transition: background-color .8s;
+}
+.cont-logo:hover {
+    background-color: rgb(228,69,127);
+    
+}
+
+.logo-img {
+    object-fit: contain;
+    width: 100%;
+    max-height: 90%;
+}
+.navbar {
+    width: 100%;
+    height: 100%;
+    color: black;
+    list-style: none;
+    padding: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+}
+
+.navbar-item {
+    background-color:   #D9D9D9;
+    padding: 2px 5px;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    transition: transform 1s,  background-color .8s;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+/* #edae49   #d1495b    #00798c    #30638e  #003d5b */
+.navbar-item:hover {
+    background-color: rgb(228,69,127);
+    transform: scale(1.1);
+    border: 1px solid white;    
+}
+
+                            /* Secciones */
+
+.cont-secciones {
+    background-image: url(https://picstatio.com/large/19b46f/wolf-howling-moon-silhouette-minimal-4k.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 92%;
+    min-width: 319;
+}
+.section {
+    width: 100%;
+}
+
+                            /* Hero */
+
+.hero {
+    height: 30%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.hero__cont-name {
+    font-family: 'Rock Salt', cursive;
+    font-size: 3em;
+    color: white;
+    text-shadow: 5px 5px rgba(0, 0, 0, 0.486);
+}
+
+                            /* PRODUCTOS */
+
+
+.productos {
+    min-width: 320px;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-size-adjust: auto;
+}
+
+.__title {
+    font-family: 'Rock Salt', cursive;
+    text-align: center;
+    color: white;
+    text-shadow: 5px 5px rgba(0, 0, 0, 0.486);
+}
+
+.cont__cards {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+.cont__cards-card {
+    min-width: 140px;
+    height: 30%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 18px;
+    box-sizing: border-box;
+    background-color: white;
+    position: relative;
+    transition-duration: 1s;
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.466);
+}
+.cont__cards-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px 5px black;
+    z-index: 1;
+}
+.card__cont-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+}
+.card__cont-img img {
+    height: 100px;
+    object-fit: contain;
+    filter: drop-shadow(5px 5px 5px black);    
+}
+.card__text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 35%;
+    font-family: cursive;
+}
+.card__text-h3 {
+    font-size: 1em;
+}
+.card__text-precio {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.precio__num {
+    font-size: 1.1em;
+}
+.precio__button {
+    color: white;
+    font-family: cursive;
+    font-size: 1em;
+    box-sizing: border-box;
+    background-color: transparent;
+    background-color: rgb(228,69,127);
+    border: 1px solid transparent;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+                            /* contacto */
+.contacto {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.cont__redes {
+    height: 80%;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.cont__redes-element {
+    background-color: rgba(255, 255, 255, 0.877) ;
+    min-height: 40px;
+    min-width: 200px;
+    width: 25%;
+    padding: 4px 9px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family:  cursive;
+    transition: transform 1s;
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.466);
+}
+
+.cont__redes-element:hover {
+    transform: scale(1.05);
+}
+
+.element__text-init {
+    font-size: 18px;
+}
+
+                            /* FOOTER */
+
+.footer {
+    height: 3%;
+    width: 100%;
+    background-color: rgb(18,29,49);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-cont-img {
+    max-width: 50px;
+}
